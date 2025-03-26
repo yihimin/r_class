@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 # .gitignore 기본 (R용)
 .Rhistory
 .RData
 .Rproj.user
+=======
+.Rproj.user
+.Rhistory
+.RData
+>>>>>>> dd208e6 (test)
 .Ruserdata
