@@ -1,0 +1,5 @@
+# .gitignore 기본 (R용)
+.Rhistory
+.RData
+.Rproj.user
+.Ruserdata
