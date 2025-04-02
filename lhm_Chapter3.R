@@ -166,3 +166,73 @@ write.csv(my.iris, "my_iris.csv", row.names=F)
 
 #test1
 dim(score)
+nrow(score)
+ncol(score)
+colnames(score)
+head(score)
+tail(score)
+
+#test2
+score1 <- matrix(c(2,2,2,4,4,4), nrow=2, ncol=3, byrow=T)
+colSums(score1)
+colMeans(score1)
+rowSums(score1)
+rowMeans(score1)
+
+#test3
+k1 <- matrix(1:8, nrow=2, ncol=4)
+t(k1)
+
+#test4
+alpha <- matrix(c('A','B','A','B'), nrow=2, ncol=2, byrow=T)
+rownames(alpha) <- c('C1','D1')
+colnames(alpha) <- c('A1','B1')
+alpha
+
+alpha1 <- as.data.frame(alpha)
+A1 <- subset(alpha1, B1 == 'B')
+
+#test5
+class(alpha1)
+is.matrix(alpha1)
+is.data.frame(alpha1)
+
+st <- data.frame(score)
+is.matrix(st)
+is.data.frame(st)
+
+s.m <- as.matrix(alpha1)
+is.matrix(s.m)
+is.data.frame(s.m)
+
+#test6
+stlhm <- read.csv("stlhm.csv", header = T)
+stlhm
+colnames(stlhm)
+rownames(stlhm)
+nrow(stlhm)
+ncol(stlhm)
+str(stlhm)
+rowSums(stlhm[ , c(2,4)])
+rowMeans(stlhm[ , c(2,4)])
+colSums(stlhm[ , c(2,4)])
+colMeans(stlhm[ , c(2,4)])
+
+#test7
+name <- c("Tom", "Jane", "Nick")
+age <- c(20, 23, 26)
+gender <- c("M", "F", "M")
+height <- c(180, 160, 175)
+student <- c(TRUE, TRUE, FALSE)
+
+human <- data.frame(name, age, gender, height, student)
+
+str(human)
+
+mean(human$age)
+mean(human$height)
+
+colnames(human[ , -4])
+
+table(human$gender)
+
