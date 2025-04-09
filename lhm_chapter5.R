@@ -202,5 +202,24 @@ hist(score, main="이희민 성적",
      col="purple")
 
 #test4
+plot(pressure$temperature,pressure$pressure)
+
 #test5
+income <- c(121, 99, 25,
+            35, 40, 30, 150,
+            24, 50, 60)
+period <- c(19,20,16,16,18,12,24,12,16,17)
+plot(income, period, main="이희민")
+
 #test6
+year <- c(2021,2022,2023,2024,2025,2026)
+population <- c(52123,52261,52388,52504,
+                52609, 52704)
+plot(year, population,
+     type="o",
+     main="연도별 예상 인구수 추계",
+     xlab="연도",
+     ylab="총인구(천명)",
+     pch = 20,
+     col="blue"
+     )
