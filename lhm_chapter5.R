@@ -178,7 +178,9 @@ lines(month,        # x축: 월
 #test1
 result <- c('P','P','F','P','F','P','F','P','P','F')
 table(result)
-barplot(table(result), main="이희민")
+barplot(table(result), main="이희민",
+        xlab="통과여부",
+        ylab="빈도")
 pie(table(result), main="이희민")
 
 #test2
