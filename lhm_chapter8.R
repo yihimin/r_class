@@ -68,13 +68,13 @@ write.csv(rules_df, file ="lhm_rules_R.csv",
 transF <- read.transactions("LHM_F.csv",
                             format="single",
                             header=T,
-                            cols =c(1, 2),
+                            cols =c(2, 3),
                             sep = ",", 
                             rm.duplicates = T,
                             encoding = "UTF-8")
 
 transF
-summary(transF)
+inspect(transF)
 #test2
 # 상품 판매 빈도 상위 3개 시각화
 itemFrequencyPlot(transF, 
