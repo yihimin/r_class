@@ -100,3 +100,36 @@ head(reslhm)
 
 #code10
 pie(table(reslhm$pn),main = "이희민 생닭 판매 고객 리뷰 감성 분석 결과")
+
+#test1
+txtlhm <- readLines("crawlinglhm.txt",
+                    encoding = "UTF-8")
+
+sentdiclhm
+
+#test2
+txtlhm_2 <- gsub("\\!", "", txtlhm)
+txtlhm_2 <- gsub("\\~", "", txtlhm_2)
+txtlhm_2 <- gsub("\\.", "", txtlhm_2)
+head(txtlhm_2)
+
+#test3
+co_txtlhm <- Corpus(VectorSource(txtlhm_2))
+inspect(co_txtlhm)
+
+#test4
+dtm_txtlhm <- DocumentTermMatrix(co_txtlhm)
+inspect(dtm_txtlhm)
+
+#test5
+reslhm <- analyzeSentiment(dtm_txtlhm, 
+                           language = "korean",
+                           rules=list("sentiment" = list(ruleSentiment,sentdiclhm)))
+
+reslhm$pn <- ifelse(reslhm$sentiment>0,
+                    "Positive", ifelse(reslhm$sentiment==0,
+                                       "Neutral", "Negative"))
+head(reslhm)
+
+#test6
+pie(table(reslhm$pn),main = "벼락이네 띵똥땡 키친 리뷰 감성 분석 결과")
