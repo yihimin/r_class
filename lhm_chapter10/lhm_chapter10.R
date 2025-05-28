@@ -46,7 +46,7 @@ nor <- function(x) {
   return (x-min(x))/ (max(x)-min(x))
 }
 
-mydata <- apply(iris[1:3, 1:2])
+mydata <- apply(iris[1:3, 1:2], 2, nor)
 head(mydata)
 
 #code1
