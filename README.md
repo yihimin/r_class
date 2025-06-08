@@ -1,5 +1,5 @@
 # 📊 K-MEANS를 활용한 한국 소득군 분류
-
+[프로젝트 소개](https://www.miricanvas.com/v/14pn8tc) <br />
 **개발 도구**: R, RStudio  
 **데이터 출처**: 한국 소득 및 복지 데이터 (`Korea Income and Welfare.csv`)
 
